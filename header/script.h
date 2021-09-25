@@ -1,13 +1,19 @@
 #pragma once
 
 #include "SDL/SDL.h"
+#include <vector>
 
-namespace Script
+class Script
 {
-    void start();
-    void update();
-    void keyDown(SDL_Keysym keysym);
-    void mouseDown(int button);
-    void mouseClick(int button);
-    void exit();
-}
+public:
+    Script();
+
+    static void start();
+    static void update();
+    static void keyDown(SDL_Keysym keysym);
+    static void mouseDown(int button);
+    static void mouseClick(int button);
+    static void exit();
+protected:
+    static std::vector<Script> scripts;
+};

@@ -3,6 +3,11 @@
 #include "script.h"
 #include "engine.h"
 
+Script::Script()
+{
+    Script::scripts.push_back(*this);
+}
+
 void Script::exit()
 {
     Engine::quit = true;

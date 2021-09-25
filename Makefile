@@ -6,6 +6,6 @@ compile:
 run:
 	./out
 push:
-	git add ./header ./source ./scripts/header ./scripts/source
+	git add ./header ./source ./scripts/header ./scripts/source ./build
 	git commit -a -m "1.0"
 	git push origin main
