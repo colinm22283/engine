@@ -58,7 +58,7 @@ void Engine::start()
         return;
     }
 
-    Script::start();
+    //Script::start();
 
     std::thread eventThread(Event::init);
     std::thread timerThread(timerUpdate);
@@ -78,7 +78,7 @@ int fpsTimer = 500;
 float fpsRead = 0;
 void Engine::update()
 {
-    Script::update();
+    //Script::update();
     Console::update();
 
     if (Global::fpsOutput)

@@ -1,7 +1,7 @@
 all:
-	g++ sceneBuilder.cpp -o sceneBuilder
-	./sceneBuilder
+	g++ ./*.cpp -o ./build
+	./build
 compile:
-	g++ sceneBuilder.cpp -o sceneBuilder
+	g++ ./*.cpp -o ./build
 run:
-	./sceneBuilder
+	./build

@@ -8,12 +8,14 @@ class Script
 public:
     Script();
 
-    static void start();
-    static void update();
-    static void keyDown(SDL_Keysym keysym);
-    static void mouseDown(int button);
-    static void mouseClick(int button);
-    static void exit();
-protected:
+    //void start();
+    //void update();
+    //void keyDown(SDL_Keysym keysym);
+    //virtual void mouseDown(int button);
+    //virtual void mouseClick(int button);
+    void exit();
+
+    static void callExit();
+//protected:
     static std::vector<Script> scripts;
 };

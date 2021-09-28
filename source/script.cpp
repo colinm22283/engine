@@ -2,6 +2,7 @@
 
 #include "script.h"
 #include "engine.h"
+#include "console.h"
 
 Script::Script()
 {
@@ -10,10 +11,18 @@ Script::Script()
 
 void Script::exit()
 {
+    Console::print("Exit");
     Engine::quit = true;
 }
-void Script::update() { };
-void Script::start() { };
-void Script::keyDown(SDL_Keysym sym) { }
-void Script::mouseClick(int x) { };
-void Script::mouseDown(int x) { };
+// void Script::update()
+// {
+//     Console::print("Update");
+// }
+
+void Script::callExit()
+{
+    for (int i = 0; i < (int)Script::scripts.size(); i++)
+    {
+        Script::scripts[i].exit();
+    }
+}

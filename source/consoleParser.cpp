@@ -17,7 +17,7 @@ bool ConsoleParser::parse(std::string code)
 
     if (first == "exit")
     {
-        Script::exit();
+        Script::callExit();
     }
     else if (first == "set")
     {

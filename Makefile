@@ -7,5 +7,5 @@ run:
 	./out
 push:
 	git add ./header ./source ./scripts/header ./scripts/source ./build ./fonts
-	git commit -a -m "1.0"
+	git commit -a -m "experimental scene build"
 	git push origin main

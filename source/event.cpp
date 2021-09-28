@@ -25,12 +25,12 @@ void Event::update()
         switch (event.type)
         {
         case SDL_QUIT:
-            Script::exit();
+            Script::callExit();
             break;
         case SDL_KEYDOWN:
             ConsoleParser::keyDown(event.key.keysym);
             Console::keyDown(event.key.keysym);
-            Script::keyDown(event.key.keysym);
+            //Script::keyDown(event.key.keysym);
             if (Global::printKeys) Console::print("Key: " + std::to_string(event.key.keysym.sym));
             break;
         case SDL_MOUSEMOTION:
@@ -55,7 +55,7 @@ void Event::update()
         break;
         case SDL_MOUSEBUTTONUP:
         {
-            Script::mouseClick(event.button.button);
+            //Script::mouseClick(event.button.button);
 
             switch (event.button.button)
             {
@@ -75,7 +75,7 @@ void Event::update()
         }
     }
 
-    if (Input::mouseLeft) Script::mouseDown(SDL_BUTTON_LEFT);
-    if (Input::mouseMiddle) Script::mouseDown(SDL_BUTTON_MIDDLE);
-    if (Input::mouseRight) Script::mouseDown(SDL_BUTTON_RIGHT);
+    if (Input::mouseLeft) {} //Script::mouseDown(SDL_BUTTON_LEFT);
+    if (Input::mouseMiddle) {} //Script::mouseDown(SDL_BUTTON_MIDDLE);
+    if (Input::mouseRight) {} //Script::mouseDown(SDL_BUTTON_RIGHT);
 }
